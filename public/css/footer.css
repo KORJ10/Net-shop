@@ -1,0 +1,108 @@
+.footer {
+    margin: 24px 115px 0 160px;
+}
+
+.pay_sistem {
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+}
+
+.about_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 38px 0 51px 0;
+}
+
+.about_zone {
+    display: flex;
+    flex-direction: column;
+}
+
+.about {
+    color: white;
+    font-size: 22px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    margin-bottom: 27px;
+}
+
+.about_links {
+    color: #CDCDCF;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    margin-bottom: 21px;
+}
+.SafeGooglePNG{
+
+    height:48px;
+}
+
+
+.safe_container {
+    display: flex;
+    align-items: center;
+}
+
+.safe_zone {
+    margin-left: 10px;
+}
+
+.safe_text {
+    color: white;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.safe_text_bold {
+    color: white;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.law {
+    color: #63686D;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400px;
+    text-align: center;
+}
+
+.more_about {
+    margin: 24px 115px 0 160px;
+    height: 300px;
+}
+
+.d {
+    display: flex;
+    justify-content: space-between;
+}
+
+.legal_info {
+    color: #4277FF;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400px;
+}
+
+.company {
+    color: #63686D;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400px;
+}
+
+.social_media {
+    display: flex;
+    align-items: center;
+}
+
+.social_media_icons {
+    margin-left: 26px;
+}

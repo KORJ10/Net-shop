@@ -1,0 +1,136 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.empty {
+    width: 9%;
+}
+
+ul {
+    margin-left: 130px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+li {
+    margin: 28px 32px 18px 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.header_links {
+    text-decoration: none;
+    color: white;
+}
+
+.user {
+    display: flex;
+    align-items: center ;
+    margin-top: 12px;
+    margin-right: -50px;
+}
+
+.userName {
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    margin-right: 22px;
+    font-size: 16px;
+}
+
+.avatar {
+    width: 34px;
+}
+
+.finder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.lines {
+    position: relative;
+    margin: 0 35px 0 32px;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    position: absolute;
+    top: -4px;
+    width: 22px;
+    height: 2.5px;
+}
+
+.line2 {
+    position: absolute;
+    top: 4px;
+    width: 14px;
+    height: 2.5px;
+}
+
+.logoText {
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    margin: 0 32px 0 180px;
+    text-decoration: none;
+}
+
+.input {
+    background-color: rgba(196, 196, 196, 0.05);
+    padding-left: 30px;
+    width: 600px;
+    height: 60px;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    margin-left: 50px;
+    font-size: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    /* background-image: url(/images/magnifier.png);
+    background-repeat: no-repeat;
+    background-size: 23px; */
+}
+
+::placeholder {
+    font-size: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+}
+
+.like_button {
+    margin: 0 25px 0 140px;
+}
+
+hr {
+    border: 1px solid #13101B;
+    margin-top: 24px;
+}
+
+.finder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 18px;
+}
+.logo1{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 5px;
+}
+.logoText-1{
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    margin: 30px 0 0 110px;
+    text-decoration: none;
+}
