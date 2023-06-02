@@ -32,7 +32,13 @@
             </div>
         </div>
     </div>
-
+    <div class="button-buy-div">
+        <a href="{{ route('product.cart', ['id' => 1]) }}">
+            <button class="buy-button">
+                <span class="button-text"></span>
+            </button>
+        </a>
+    </div>
 
     </div>
 
