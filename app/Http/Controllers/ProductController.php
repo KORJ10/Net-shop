@@ -18,6 +18,14 @@ class ProductController extends Controller
         $products = Product::all();
 
         return view('products.index',compact('products'));
+
+    }
+
+    public function catalog()
+    {
+        $products = Product::all();
+
+        return view('client.categories.category',compact('products'));
     }
 
     /**
@@ -27,7 +35,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        return view('admin.products.create');
     }
 
     /**

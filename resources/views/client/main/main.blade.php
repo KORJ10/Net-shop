@@ -176,7 +176,7 @@
             </div>
 
             <div class="button-buy-div">
-                <a href="{{ route('product.cart', ['id' => 1]) }}">
+                <a href="{{ route('cart_tovar', ['id' => 1]) }}">
                     <button class="buy-button">
                         <span class="button-text">Купить</span>
                     </button>
@@ -214,7 +214,6 @@
 <div class="wrapper">
     <div class="Promotions_and_discounts">
         <span class="Promotions_and_discounts_Main_text">Акции и скидки % </span>
-        {{--        <span class="procent">%</span>--}}
         <div class="containerSLIDER">
             <div class="slider">
                 <div id="carouselExampleCaptions" class="carousel slide">

@@ -198,42 +198,33 @@
 
 
     <div class="wrapper">
+       @foreach($products as $product)
+            <div class="cards">
+                <div class="image_zone">
+                    <img src="{{ asset('storage/files/'.$product->photo) }}" alt="" class="product1 img-fluid">
+                </div>
 
-        <div class="cards">
-            <div class="image_zone">
-                <img src="images/product1.png" alt="" class="product1">
-            </div>
+                <div class="descr_zone">
+                    <p class="description">{{$product->description}}</p>
+                </div>
 
-            <div class="descr_zone">
-                <p class="description">Смартфон Samsung Galaxy A23</p>
-                <p class="description">6/128GB Black</p>
-            </div>
+                <div class="price_zone">
+                    <p class="first_price">{{($product->price)*(15/100)}}</p>
+                    </p><p class="discount">-15%</p>
+                    <p class="second_price">{{$product->price}}
+                </div>
 
-            <div class="price_zone">
-                <p class="first_price">28 891 сом</p>
-                <p class="discount">-15%</p>
-                <p class="second_price">33 990 сом</p>
-            </div>
 
-        </div>
-
-        <div class="cards">
-            <div class="image_zone">
-                <img src="images/product1.png" alt="" class="product1">
-            </div>
-
-            <div class="descr_zone">
-                <p class="description">Смартфон Samsung Galaxy A23</p>
-                <p class="description">6//128GB Black</p>
-            </div>
-
-            <div class="price_zone">
-                <p class="first_price">28 891 сом</p>
-                <p class="discount">-15%</p>
-                <p class="second_price">33 990 сом</p>
-            </div>
+                <div class="button-buy-div">
+                    <a href="{{ route('product.add-to-cart',['id' => $product->id]) }}">
+                        <button class="buy-button">
+                            <span class="button-text">buy</span>
+                        </button>
+                    </a>
+                </div>
 
         </div>
+       @endforeach
 
         <div class="cards">
             <div class="image_zone">
@@ -289,77 +280,6 @@
 
         </div>
 
-        <div class="cards">
-            <div class="image_zone">
-                <img src="images/product1.png" alt="" class="product1">
-            </div>
-
-            <div class="descr_zone">
-                <p class="description">Смартфон Samsung Galaxy A23</p>
-                <p class="description">6//128GB Black</p>
-            </div>
-
-            <div class="price_zone">
-                <p class="first_price">28 891 сом</p>
-                <p class="discount">-15%</p>
-                <p class="second_price">33 990 сом</p>
-            </div>
-
-        </div>
-
-        <div class="cards">
-            <div class="image_zone">
-                <img src="images/product1.png" alt="" class="product1">
-            </div>
-
-            <div class="descr_zone">
-                <p class="description">Смартфон Samsung Galaxy A23</p>
-                <p class="description">6//128GB Black</p>
-            </div>
-
-            <div class="price_zone">
-                <p class="first_price">28 891 сом</p>
-                <p class="discount">-15%</p>
-                <p class="second_price">33 990 сом</p>
-            </div>
-
-        </div>
-
-        <div class="cards">
-            <div class="image_zone">
-                <img src="images/product1.png" alt="" class="product1">
-            </div>
-
-            <div class="descr_zone">
-                <p class="description">Смартфон Samsung Galaxy A23</p>
-                <p class="description">6//128GB Black</p>
-            </div>
-
-            <div class="price_zone">
-                <p class="first_price">28 891 сом</p>
-                <p class="discount">-15%</p>
-                <p class="second_price">33 990 сом</p>
-            </div>
-
-        </div>
-
-        <div class="cards">
-            <div class="image_zone">
-                <img src="images/product1.png" alt="" class="product1">
-            </div>
-
-            <div class="descr_zone">
-                <p class="description">Смартфон Samsung Galaxy A23</p>
-                <p class="description">6//128GB Black</p>
-            </div>
-
-            <div class="price_zone">
-                <p class="first_price">28 891 сом</p>
-                <p class="discount">-15%</p>
-                <p class="second_price">33 990 сом</p>
-            </div>
-
-        </div>
     </div>
 
 </div>
