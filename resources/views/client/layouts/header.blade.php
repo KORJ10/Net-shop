@@ -21,7 +21,11 @@
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ Auth::user()->name }}
                     </button>
+<<<<<<< HEAD
+                    <ul class="dropdown-menu" aria-labelledby="userDropdownMenu">
+=======
                     <ul  class="dropdown-menu" aria-labelledby="userDropdownMenu">
+>>>>>>> f0c85adfcc6dfb7295e055442f84add55a2764ef
                         <li><a class="dropdown-item" href="{{ route('logout') }}">Выход</a></li>
                     </ul>
                 </div>
@@ -30,6 +34,11 @@
     </div>
 
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f0c85adfcc6dfb7295e055442f84add55a2764ef
 </div>
 
 <div class="finder">
@@ -42,6 +51,13 @@
         <img src="images/line2.png" alt="" class="line2">
     </div>
     <input type="text" placeholder="Поиск" class="input">
+<<<<<<< HEAD
+
+    <button class="actions" type="button">
+        <img src="images/cart.png" alt="">
+    </button>
+
+=======
     <div class="actions">
         <a href="{{ route('product.cart') }}">
             <button class="buy-button">
@@ -49,6 +65,7 @@
             </button>
         </a>
     </div>
+>>>>>>> f0c85adfcc6dfb7295e055442f84add55a2764ef
 </div>
 
 <hr>

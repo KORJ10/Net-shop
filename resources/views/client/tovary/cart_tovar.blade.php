@@ -7,41 +7,37 @@
 
 
     <div class="wrapper">
-        <div class="block-1">
-            <div class="slider middle" >
-
-                <div class="sliders">
-
-                    <input type="radio" name="r" id ="r1" checked >
-                    <input type="radio" name="r" id ="r2" >
-
-
-
-                    <div class="slide s1"><img src="images/product1.png" alt=""></div>
-                    <div class="slide"><img src="images/iphoneMain.png" alt=""></div>
-
-
-
+        <div class="Tovar_Cart">
+            <div class="sliderC">
+                <div class="main-cardC">
+                    <img src="images/product1.png" alt="Main ImageC" class="main-imageC">
                 </div>
-                <div class="navigation">
-
-
-                    <label for="r1" class="bar"></label>
-                    <label for="r2" class="bar"></label>
-
-
+                <div class="thumbnailsC">
+                    <img src="images/AsusTuf.png" alt="Thumbnail 1C" class="thumbnailC">
+                    <img src="image3.jpg" alt="Thumbnail 2C" class="thumbnailC">
+                    <img src="image4.jpg" alt="Thumbnail 3C" class="thumbnailC">
                 </div>
-
-
             </div>
-            <div class="button-buy-div">
-                <a href="{{ route('product.add-to-cart', ['id' => $product->id]) }}">
-                    <button class="buy-button">
-                        <span class="button-text">Купить</span>
-                    </button>
-                </a>
+            <div class="text_Tovar_Cart">
+                <div class="heading">Смартфон Sumsung Galaxy A23 6/128GB</div>
+                <div class="subheading">
+                    <span class="price">28 891 сом</span> <span class="price-1">33 990 сом</span>
+                </div>
             </div>
         </div>
+        <div class="text_Tovar_Cart">
+            <div class="heading">Смартфон Sumsung Galaxy A23 6/128GB</div>
+            <div class="subheading">
+                <span class="price">28 891 сом</span> <span class="price-1">33 990 сом</span>
+            </div>
+        </div>
+    </div>
+    <div class="button-buy-div">
+        <a href="{{ route('product.cart', ['id' => 1]) }}">
+            <button class="buy-button">
+                <span class="button-text"></span>
+            </button>
+        </a>
     </div>
     <div class="text-left-slider">
         <h1 class="Description-features">Описание</h1>
