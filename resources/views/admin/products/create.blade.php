@@ -14,7 +14,7 @@
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Image</label>
-                <input type="file" class="form-control" id="exampleInputEmail1" name="image" aria-describedby="emailHelp">
+                <input type="file" class="form-control" id="exampleInputEmail1" name="photo" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Description</label>

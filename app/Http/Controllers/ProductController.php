@@ -47,12 +47,12 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $product = Product::create($request->all());
-        if ($request->has('image')) {
-            $product->image = ImageUploader::upload($request->image, 'product', 'image');
+        if ($request->has('photo')) {
+            $product->photo = ImageUploader::upload($request->photo, 'product', 'image');
         }
         $product->save();
 
-        return redirect()->route('products.store');
+        return redirect()->route('products.index');
     }
 
     /**
@@ -63,7 +63,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show',compact('product'));
+        return view('client.tovary.cart_tovar',compact('product'));
     }
 
     /**
