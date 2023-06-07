@@ -28,6 +28,7 @@
             @endguest
         </div>
     </div>
+
 </div>
 
 <div class="finder">
@@ -40,10 +41,9 @@
         <img src="images/line2.png" alt="" class="line2">
     </div>
     <input type="text" placeholder="Поиск" class="input">
-
-    <div class="cart-button">
+    <div class="actions">
         <a href="{{ route('product.cart') }}">
-            <button class="actions">
+            <button class="actions" type="button">
                 <img src="images/cart.png" alt="">
             </button>
         </a>
