@@ -17,7 +17,7 @@ class ProductController extends Controller
     {
         $products = Product::all();
 
-        return view('products.index',compact('products'));
+        return view('admin.products.index',compact('products'));
 
     }
 
@@ -63,7 +63,12 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('client.tovary.cart_tovar',compact('product'));
+        return view('admin.products.show',compact('product'));
+    }
+
+    public function showDefineProduct(Product $product)
+    {
+        return view('admin.products.showDefineProduct',compact('product'));
     }
 
     /**
@@ -90,6 +95,11 @@ class ProductController extends Controller
         $product->save();
 
         return redirect()->route('products.index');
+    }
+
+    public function updateCart(Request $request)
+    {
+
         if($request->id and $request->quantity)
         {
             $cart = session()->get('cart');
@@ -97,9 +107,8 @@ class ProductController extends Controller
             session()->put('cart', $cart);
             session()->flash('success', 'Cart updated successfully');
         }
-        return redirect()->route('products.index');
+        return redirect()->route('product.cart');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -110,7 +119,6 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return redirect()->route('products.index');
         return redirect()->route('products.index');
     }
     public function cart()

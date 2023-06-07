@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('layouts.app')
 @section('content')
 
     <div class="container">
@@ -23,10 +23,6 @@
 {{--            <div class="mb-3">--}}
 {{--                <label for="exampleInputEmail1" class="form-label">Category</label>--}}
 {{--                <input type="number" class="form-control" id="exampleInputEmail1" name="category_id" aria-describedby="emailHelp">--}}
-{{--            </div>--}}
-{{--            <div class="mb-3">--}}
-{{--                <label for="exampleInputEmail1" class="form-label">Comment</label>--}}
-{{--                <input type="number" class="form-control" id="exampleInputEmail1" name="Comment_id" aria-describedby="emailHelp">--}}
 {{--            </div>--}}
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

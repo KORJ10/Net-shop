@@ -26,7 +26,7 @@
     factory(jQuery);
   }
 }(function($) {
-  // Create the defaults once
+  // category the defaults once
   var pluginName = 'bootstrapDualListbox',
     defaults = {
       filterTextClear: 'show all',

@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Cart')
 
@@ -34,12 +34,12 @@
                     </td>
                     <td data-th="Price">${{ $details['price'] }}</td>
                     <td data-th="Quantity">
-                        <input type="number" value="{{ $details['quantity'] }}" class="form-control quantity" />
+                        <input type="number" min="0" value="{{ $details['quantity'] }}" />
                     </td>
                     <td data-th="Subtotal" class="text-center">${{ $details['price'] * $details['quantity'] }}</td>
                     <td class="actions" data-th="">
-                        <button class="btn btn-info btn-sm update-cart" data-id="{{ $id }}"><i class="fa fa-refresh"></i></button>
-                        <button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}"><i class="fa fa-trash-o"></i></button>
+                        <button class="btn btn-info btn-sm update-cart" data-id="{{ $id }}"><img src="/public/images/950774.png"></button>
+                        <button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}">-</button>
                     </td>
                 </tr>
             @endforeach
@@ -47,9 +47,6 @@
 
         </tbody>
         <tfoot>
-        <tr class="visible-xs">
-            <td class="text-center"><strong>Total {{ $total }}</strong></td>
-        </tr>
         <tr>
             <td><a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
             <td colspan="2" class="hidden-xs"></td>
@@ -63,8 +60,8 @@
                 e.preventDefault();
                 var ele = $(this);
                 $.ajax({
-                    url: '{{ url('update-cart') }}',
-                    method: "patch",
+                    url: '{{ url('products.update-cart') }}',
+                    method: "post",
                     data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
                     success: function (response) {
                         window.location.reload();
@@ -76,7 +73,7 @@
                 var ele = $(this);
                 if(confirm("Are you sure")) {
                     $.ajax({
-                        url: '{{ url('remove-from-cart') }}',
+                        url: '{{ url('roducts.remove-product') }}',
                         method: "DELETE",
                         data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
                         success: function (response) {

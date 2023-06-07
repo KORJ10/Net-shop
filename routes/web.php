@@ -20,24 +20,22 @@ Auth::routes();
 Route::resource('products',ProductController::class);
 Route::get('/catalog',[ProductController::class,'catalog'])->name('catalog');
 Route::get('/cart', [ProductController::class,'cart'])->name('product.cart');
-Route::get('/add-to-cart/{id}', [ProductController::class,'addToCart'])->name('product.add-to-cart');
-Route::patch('update-cart', [ProductController::class,'update'])->name('product.update');
-Route::delete('remove-from-cart', [ProductController::class,'remove'])->name('product.remove');
+Route::get('/add-to-cart/{id}', [ProductController::class,'addToCart'])->name('products.add-to-cart');
+Route::post('/update-cart', [ProductController::class,'updateCart'])->name('products.update-cart');
+Route::delete('/remove-from-cart', [ProductController::class,'remove'])->name('products.remove-product');
+Route::get('/define_product',[ProductController::class,'showDefineProduct'])->name('product.show-define-product');
 
 //Route::resource('comments',CommentController::class);
 //Route::resource('orders',OrderController::class);
 //Route::resource('orderHistories',OrderHistoryController::class);
 //Route::resource('payments',PaymentController::class);
-//Route::resource('categories',CategoryController::class);
+Route::resource('categories',CategoryController::class);
 
 
-Route::get('/cart_tovar', function () {
-    return view('client.tovary.cart_tovar');
-})->name('cart_tovar');
 
-Route::get('/garantii', function () {
-    return view('client.garantii.garantii');
-})->name('garantii');
+Route::get('/garanty', function () {
+    return view('garanty');
+})->name('garanty');
 
 Route::middleware(['role:admin'])->prefix('admin_panel')->group(function(){
     Route::get('/',[\App\Http\Controllers\Admin\HomeController::class,'index']);

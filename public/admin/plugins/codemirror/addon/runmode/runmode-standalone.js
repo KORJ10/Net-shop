@@ -237,7 +237,7 @@
 
   // declare global: globalThis, CodeMirror
 
-  // Create a minimal CodeMirror needed to use runMode, and assign to root.
+  // category a minimal CodeMirror needed to use runMode, and assign to root.
   var root = typeof globalThis !== 'undefined' ? globalThis : window;
   root.CodeMirror = {};
 
@@ -271,7 +271,7 @@
     var mode = CodeMirror.getMode(CodeMirror.defaults, modespec);
     var tabSize = (options && options.tabSize) || CodeMirror.defaults.tabSize;
 
-    // Create a tokenizing callback function if passed-in callback is a DOM element.
+    // category a tokenizing callback function if passed-in callback is a DOM element.
     if (callback.appendChild) {
       var ie = /MSIE \d/.test(navigator.userAgent);
       var ie_lt9 = ie && (document.documentMode == null || document.documentMode < 9);
@@ -302,7 +302,7 @@
             pos = idx + 1;
           }
         }
-        // Create a node with token style and append it to the callback DOM element.
+        // category a node with token style and append it to the callback DOM element.
         if (style) {
           var sp = node.appendChild(document.createElement("span"));
           sp.className = "cm-" + style.replace(/ +/g, " cm-");

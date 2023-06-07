@@ -12,62 +12,49 @@
 
 @section('content')
 
-
-<head>
-
-
-
-</head>
 <body>
 <div class="block-1">
     <div class="Catalog">
         <div class="v1602_2096">
             <span class="v1602_2094">Каталог</span>
-            <button class="catal_button">
-                <p class="v1602_2095">• Компьютеры </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Ноутбуки </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Консоли </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Смартфоны </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Планшеты </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Клавиатуры </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Мышки </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Наушники </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Микрофоны </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Геймпады </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Мониторы </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Комплектующие </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• VR оборудование </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Для дома </p>
-            </button>
-            <button class="catal_button">
-                <p class="v1602_2095">• Аксессуары </p>
-            </button>
+            @foreach($categories as $category)
+                <button class="catal_button">
+                    <p class="v1602_2095">.
+                        {{$category->name}} </p>
+                </button>
+            @endforeach
+
+
+{{--            <button class="catal_button">--}}
+{{--                <p class="v1602_2095">•  </p>--}}
+{{--            </button>--}}
+{{--            <button class="catal_button">--}}
+{{--                <p class="v1602_2095">•  </p>--}}
+{{--            </button>--}}
+{{--            <button class="catal_button">--}}
+{{--                <p class="v1602_2095">• Наушники </p>--}}
+{{--            </button>--}}
+{{--            <button class="catal_button">--}}
+{{--                <p class="v1602_2095">• Микрофоны </p>--}}
+{{--            </button>--}}
+{{--            <button class="catal_button">--}}
+{{--                <p class="v1602_2095">• Геймпады </p>--}}
+{{--            </button>--}}
+{{--            <button class="catal_button">--}}
+{{--                <p class="v1602_2095">• Мониторы </p>--}}
+{{--            </button>--}}
+{{--            <button class="catal_button">--}}
+{{--                <p class="v1602_2095">• Комплектующие </p>--}}
+{{--            </button>--}}
+{{--            <button class="catal_button">--}}
+{{--                <p class="v1602_2095">• VR оборудование </p>--}}
+{{--            </button>--}}
+{{--            <button class="catal_button">--}}
+{{--                <p class="v1602_2095">• Для дома </p>--}}
+{{--            </button>--}}
+{{--            <button class="catal_button">--}}
+{{--                <p class="v1602_2095">•  </p>--}}
+{{--            </button>--}}
 
         </div>
 
@@ -176,7 +163,7 @@
             </div>
 
             <div class="button-buy-div">
-                <a href="{{ route('cart_tovar', ['id' => 1]) }}">
+                <a href="{{ route('product.show-define-product', ['id' => 1]) }}">
                     <button class="buy-button">
                         <span class="button-text">Купить</span>
                     </button>
@@ -198,7 +185,7 @@
             </div>
 
             <div class="button-buy-div2">
-                <a href="{{ route('cart_tovar', ['id' => 1]) }}">
+                <a href="{{ route('product.show-define-product', ['id' => 1]) }}">
                     <button class="buy-button">
                         <span class="button-text2">Купить</span>
                     </button>
@@ -223,33 +210,37 @@
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="{{ route('cart_tovar', ['id' => 1]) }}">
-                                <img src="images/iphone14.png" class="d-block img-fluid" alt="..." style="margin-left: 455px; width: 500px">
-                                <div class="carousel-caption d-none d-md-block custom-caption">
-                                    <h5>Iphone 14</h5>
-                                    <p>84 480 сом</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="{{ route('cart_tovar', ['id' => 2]) }}">
-                                <img src="images/AsusTuf.png" class="d-block img-fluid" alt="..." style="margin-left: 455px; width: 500px">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Ноутбук Asus TUF Gaming/RTX 3070 4GB</h5>
-                                    <p>61 871 сом</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="{{ route('cart_tovar', ['id' => 3]) }}">
-                                <img src="images/SumesungPad.png" class="d-block img-fluid" alt="..." style="margin-left: 455px; width: 500px">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Планшет Samsung Galaxy Tab A8</h5>
-                                    <p>23 196 сом</p>
-                                </div>
-                            </a>
-                        </div>
+
+{{--                        @foreach($products as $product)--}}
+{{--                            <div class="carousel-item active">--}}
+{{--                                <a href="{{ route('product.show-define-product',$product) }}">--}}
+{{--                                    <img src="images/iphone14.png" class="d-block img-fluid" alt="..." style="margin-left: 455px; width: 500px">--}}
+{{--                                    <div class="carousel-caption d-none d-md-block custom-caption">--}}
+{{--                                        <h5>Iphone 14</h5>--}}
+{{--                                        <p>84 480 сом</p>--}}
+{{--                                    </div>--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
+
+{{--                        <div class="carousel-item">--}}
+{{--                            <a href="{{ route('product.cart', ['id' => 2]) }}">--}}
+{{--                                <img src="images/AsusTuf.png" class="d-block img-fluid" alt="..." style="margin-left: 455px; width: 500px">--}}
+{{--                                <div class="carousel-caption d-none d-md-block">--}}
+{{--                                    <h5>Ноутбук Asus TUF Gaming/RTX 3070 4GB</h5>--}}
+{{--                                    <p>61 871 сом</p>--}}
+{{--                                </div>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                        <div class="carousel-item">--}}
+{{--                            <a href="{{ route('product.cart', ['id' => 3]) }}">--}}
+{{--                                <img src="images/SumesungPad.png" class="d-block img-fluid" alt="..." style="margin-left: 455px; width: 500px">--}}
+{{--                                <div class="carousel-caption d-none d-md-block">--}}
+{{--                                    <h5>Планшет Samsung Galaxy Tab A8</h5>--}}
+{{--                                    <p>23 196 сом</p>--}}
+{{--                                </div>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -284,15 +275,6 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
 </body>
 
 
@@ -301,9 +283,7 @@
 @push('css')
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <style>
-        /*h1 {*/
-        /*    color: red;*/
-        /*}*/
+
     </style>
 @endpush
 

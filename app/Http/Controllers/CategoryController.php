@@ -16,7 +16,7 @@ public function index()
 {
 $categories = Category::all();
 
-return view('categories.index',compact($categories));
+return view('category.index',compact('categories'));
 }
 
 /**
@@ -26,7 +26,7 @@ return view('categories.index',compact($categories));
 */
 public function create()
 {
-return view('categories.create');
+return view('category.create');
 }
 
 /**
@@ -40,7 +40,7 @@ public function store(Request $request)
 $categories = Category::create($request->all());
 $categories->save();
 
-return redirect()->route('categories.store');
+return redirect()->route('categories.index');
 }
 
 /**
@@ -51,7 +51,7 @@ return redirect()->route('categories.store');
 */
 public function show(Category $category)
 {
-return view('categories.show',compact('category'));
+return view('category.show',compact('category'));
 }
 
 /**
@@ -62,7 +62,7 @@ return view('categories.show',compact('category'));
 */
 public function edit(Category $category)
 {
-return view('categories.edit',compact('category'));
+return view('category.edit',compact('category'));
 }
 
 /**
@@ -77,7 +77,7 @@ public function update(Request $request, Category $category)
 $category->update($request->all());
 $category->save();
 
-return redirect()->route('categories.show');
+return redirect()->route('categories.index');
 }
 
 /**
