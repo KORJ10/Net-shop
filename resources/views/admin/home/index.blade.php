@@ -9,17 +9,17 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Dashboard</h1>
-                </div><!-- /.col -->
+                </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard v1</li>
+                        <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- /.content-header -->
+
 
     <!-- Main content -->
     <section class="content">
@@ -85,12 +85,16 @@
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-                <!-- ./col -->
-            </div>
-            <!-- /.row -->
-            <!-- Main row -->
 
-            <!-- /.row (main row) -->
-        </div><!-- /.container-fluid -->
+                <div>
+                   <a href="{{route('categories.index')}}"><button>создать ктегории</button></a>
+                </div>
+                <div>
+                    <a href="{{route('products.index')}}"><button>посмотреть склад продуктов</button></a>
+                </div>
+
+            </div>
+
+        </div>
     </section>
 @endsection

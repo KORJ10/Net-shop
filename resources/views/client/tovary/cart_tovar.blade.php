@@ -4,8 +4,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Manrope:wght@400;600;700;800&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/cart_tovar.css') }}">
 @section('content')
-
-
     <div class="wrapper">
         <div class="block-1">
             <div class="slider middle" >
@@ -14,29 +12,15 @@
 
                     <input type="radio" name="r" id ="r1" checked >
                     <input type="radio" name="r" id ="r2" >
-
-
-
                     <div class="slide s1"><img src="images/product1.png" alt=""></div>
                     <div class="slide"><img src="images/iphoneMain.png" alt=""></div>
 
-
-
-
-
-
-
-
                 </div>
                 <div class="navigation">
-
-
                     <label for="r1" class="bar"></label>
                     <label for="r2" class="bar"></label>
 
-
                 </div>
-
 
             </div>
             <div class="text_Tovar_Cart">
@@ -79,7 +63,6 @@
             Размер основного экрана167.2 мм (6.6")
 
             Разрешение основного экрана1080 x 2408 (FHD+)
-
 
         </p>
     </div>

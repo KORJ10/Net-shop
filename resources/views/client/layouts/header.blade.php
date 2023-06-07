@@ -5,7 +5,7 @@
     <div class="empty"></div>
     <div class="navBar">
         <ul>
-            <li><a href="{{ route('garantii') }}" class="header_links">Гарантии</a></li>
+            <li><a href="{{ route('garanty') }}" class="header_links">Гарантии</a></li>
             <li><a href="{{ route('catalog') }}" class="header_links">Каталог</a></li>
         </ul>
     </div>
@@ -43,9 +43,9 @@
     <input type="text" placeholder="Поиск" class="input">
     <div class="actions">
         <a href="{{ route('product.cart') }}">
-            <button class="actions" type="button">
-                <img src="images/cart.png" alt="">
-            </button>
+                <button type="button" class="actions" >
+                    <img src="images/cart.png" alt="image"><span class="badge rounded-pill badge-notification bg-danger" style="font-size:10px">{{ count((array) session('cart')) }}</span>
+                </button>
         </a>
     </div>
 

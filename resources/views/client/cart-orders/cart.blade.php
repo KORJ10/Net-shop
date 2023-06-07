@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Manrope:wght@400;600;700;800&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
-@section('title', 'Cart')
+{{--@section('title', 'Cart')--}}
 @section('content')
 
     <div class="div-main-text">
@@ -39,12 +39,12 @@
                     </td>
                     <td class="color-price" data-th="Price">{{ $details['price'] }} сом</td>
                     <td data-th="Quantity">
-                        <input type="number" value="{{ $details['quantity'] }}" class="form-control quantity" />
+                        <input type="number" readonly  min="0" value="{{ $details['quantity'] }}" class="form-control quantity-{{$id}}" />
                     </td>
-                    <td data-th="Subtotal" class="text-center">${{ $details['price'] * $details['quantity'] }}</td>
+                    <td data-th="Subtotal" class="text-center">{{ $details['price'] * $details['quantity'] }}</td>
                     <td class="actions" data-th="">
-                        <button class="btn btn-info btn-sm update-cart" data-id="{{ $id }}"><i class="fa fa-refresh"></i></button>
-                        <button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}"><i class="fa fa-trash-o"></i></button>
+                        <button class="btn btn-info btn-sm update-cart" data-id="{{ $id }}">+</button>
+                        <button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}">-</button>
                     </td>
                 </tr>
             @endforeach
@@ -106,44 +106,45 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </div>--}}
-    @section('scripts')
-        <script type="text/javascript">
-            $(".update-cart").click(function (e) {
-                e.preventDefault();
-                var ele = $(this);
-                $.ajax({
-                    url: '{{ url('update-cart') }}',
-                    method: "patch",
-                    data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
-                    success: function (response) {
-                        window.location.reload();
-                    }
-                });
-            });
-            $(".remove-from-cart").click(function (e) {
-                e.preventDefault();
-                var ele = $(this);
-                if(confirm("Are you sure")) {
-                    $.ajax({
-                        url: '{{ url('remove-from-cart') }}',
-                        method: "DELETE",
-                        data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
-                        success: function (response) {
-                            window.location.reload();
-                        }
-                    });
-                }
-            });
-        </script>
     @endsection
 
-@endsection
+{{--@endsection--}}
 @push('css')
     <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
 @endpush
 
 @push('js')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(".update-cart").click(function (e) {
+            // e.preventDefault();
+            let id = $(this).data('id');
+
+            $.ajax({
+                url: '{{ route('products.update-cart') }}',
+                type: "POST",
+                data: {_token: '{{ csrf_token() }}', id:id},
+                success: function (response) {
+                    $('.quantity-'+id).val(response.quantity);
+
+                }
+            });
+        });
+        $(".remove-from-cart").click(function (e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+                $.ajax({
+                    url: '{{ route('products.remove-product') }}',
+                    method: "DELETE",
+                    data: {_token: '{{ csrf_token() }}', id:id},
+                    success: function (response) {
+                      window.location.reload();
+
+                    }
+                });
+        });
+    </script>
+
     <script>
         $(document).ready(function() {
             // $('.order-button1').click(function() {

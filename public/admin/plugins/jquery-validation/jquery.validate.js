@@ -963,7 +963,7 @@ $.extend( $.validator, {
 				error.html( message );
 			} else {
 
-				// Create error element
+				// category error element
 				error = $( "<" + this.settings.errorElement + ">" )
 					.attr( "id", elementID + "-error" )
 					.addClass( this.settings.errorClass )

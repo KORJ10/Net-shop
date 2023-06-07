@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * category a new controller instance.
      *
      * @return void
      */
@@ -23,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('client.main.main');
+        $categories = Category::all();
+        $products = Product::all();
+
+        return view('client.main',compact(['categories', 'products']));
     }
+
+
 }

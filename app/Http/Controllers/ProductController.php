@@ -17,7 +17,7 @@ class ProductController extends Controller
     {
         $products = Product::all();
 
-        return view('products.index',compact('products'));
+        return view('admin.products.index',compact('products'));
 
     }
 
@@ -63,7 +63,12 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('client.tovary.cart_tovar',compact('product'));
+        return view('admin.products.show',compact('product'));
+    }
+
+    public function showDefineProduct(Product $product)
+    {
+        return view('admin.products.showDefineProduct',compact('product'));
     }
 
     /**
@@ -90,16 +95,19 @@ class ProductController extends Controller
         $product->save();
 
         return redirect()->route('products.index');
-        if($request->id and $request->quantity)
-        {
-            $cart = session()->get('cart');
-            $cart[$request->id]["quantity"] = $request->quantity;
-            session()->put('cart', $cart);
-            session()->flash('success', 'Cart updated successfully');
-        }
-        return redirect()->route('products.index');
     }
 
+    public function addProduct(Request $request)
+    {
+        if($request->id)
+        {
+            $cart = session()->get('cart');
+            $cart[$request->id]["quantity"] = $cart[$request->id]["quantity"] + 1;
+            session()->put('cart', $cart);
+
+        }
+        return response()->json(['id' => $request->id,'quantity' => $cart[$request->id]["quantity"]]);
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -110,7 +118,6 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return redirect()->route('products.index');
         return redirect()->route('products.index');
     }
     public function cart()
@@ -138,7 +145,6 @@ class ProductController extends Controller
             session()->put('cart', $cart);
             return redirect()->back()->with('success', 'Product added to cart successfully!');
         }
-        // if cart not empty then check if this product exist then increment quantity
         if(isset($cart[$id])) {
             $cart[$id]['quantity']++;
             session()->put('cart', $cart);
@@ -156,13 +162,12 @@ class ProductController extends Controller
     }
     public function remove(Request $request)
     {
-        if($request->id) {
+        if ($request->id) {
+            if(confirm('вы уверены?'))
             $cart = session()->get('cart');
-            if(isset($cart[$request->id])) {
-                unset($cart[$request->id]);
-                session()->put('cart', $cart);
-            }
-            session()->flash('success', 'Product removed successfully');
+            unset($cart[$request->id]);
+            session()->put('cart', $cart);
+            session()->flash('success', 'Cart updated successfully');
         }
     }
 }

@@ -72,5 +72,5 @@
 </div>
 @endsection
 @push('css')
-    <link rel="stylesheet" href="{{ asset('css/cart_tovar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/product_show.css') }}">
 @endpush
