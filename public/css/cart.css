@@ -16,6 +16,7 @@ body {
 }
 .nomargin{
     margin-left: 95px;
+    color: white;
 }
 .custom-color {
     background: rgba(119, 190, 29, 0.1);
@@ -39,7 +40,9 @@ body {
     justify-content: center;
     margin-left: 1000px;
 }
-
+.color-price{
+color: white;
+}
 .table1:hover {
     border-color: rgba(119, 190, 29, 1);
 }

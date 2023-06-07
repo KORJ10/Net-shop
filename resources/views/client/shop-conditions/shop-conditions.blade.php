@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Manrope:wght@400;600;700;800&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/shop-cond.css') }}">
 @section('content')
-    <img src="images/garantii.jpg" alt="Описание картинки" style="width: 90%">
+    <img src="images/uslovie.jpg" alt="Описание картинки" style="width: 100%">
     <div class="garantii">
         <div class="big-text">Условия и условия магазина TechBazzar</div>
         <div class="small-text">Добро пожаловать в магазин TechBazzar! Прежде чем совершить покупку, пожалуйста, ознакомьтесь с нашими условиями и условиями, чтобы убедиться, что вы полностью понимаете правила нашего магазина. </div>

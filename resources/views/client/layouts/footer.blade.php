@@ -21,16 +21,8 @@
     <div class="about_container">
         <div class="about_zone">
             <p class="about">О компании</p>
-            <a href="#" class="about_links">О нас</a>
-            <a href="#" class="about_links">Вакансии</a>
-            <a href="#" class="about_links">Реквизиты</a>
-        </div>
-
-        <div class="about_zone">
-            <p class="about">О компании</p>
-            <a href="#" class="about_links">О нас</a>
-            <a href="#" class="about_links">Вакансии</a>
-            <a href="#" class="about_links">Реквизиты</a>
+            <a href="{{ route('o_nas') }}" class="about_links">О нас</a>
+            <a href="{{ route('address') }}" class="about_links">Адресс</a>
         </div>
 
         <div class="safe_container">

@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #06030F;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #06030F;
+}
+.garantii{
+    background-color: #1a202c;
+
+}
+.big-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Manrope';
+    font-style: normal;
+    color: rgba(119, 190, 29, 1);
+    display: flex;
+}
+
+.small-text {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+}
+
+.list-item {
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: rgba(255, 255, 255, 1);
+}
+

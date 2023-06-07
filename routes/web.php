@@ -43,6 +43,14 @@ Route::get('/shop-conditions', function () {
     return view('client.shop-conditions.shop-conditions');
 })->name('shop-conditions');
 
+Route::get('/o_nas', function () {
+    return view('client.o_nas.o_nas');
+})->name('o_nas');
+
+Route::get('/address', function () {
+    return view('client.address.address');
+})->name('address');
+
 Route::middleware(['role:admin'])->prefix('admin_panel')->group(function(){
     Route::get('/',[\App\Http\Controllers\Admin\HomeController::class,'index']);
 });
