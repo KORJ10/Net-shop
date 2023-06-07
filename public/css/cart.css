@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #06030F;
+}
+.main-text{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+.nomargin{
+    margin-left: 95px;
+}
+.custom-color {
+    background: rgba(119, 190, 29, 0.1);
+    border:none;
+    color: #77BE1D;
+}
+.custom-color:hover {
+    background: rgba(119, 190, 29, 1);
+}
+.itog{
+    color: rgba(119, 190, 29, 1);
+}
+.table1 {
+    box-sizing: border-box;
+    width: 321px;
+    height: 382px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1000px;
+}
+
+.table1:hover {
+    border-color: rgba(119, 190, 29, 1);
+}
+
+.table-cell1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.header1 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.price1 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 135%;
+}
+
+.order-button1 {
+    width: 261px;
+    height: 63px;
+    background: rgba(119, 190, 29, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.order-button1:hover {
+    background: rgba(119, 190, 29, 1);
+}
+
+.order-button1:hover .button-text1{
+   color: white;
+}
+
+.button-text1 {
+    width: 144px;
+    height: 23px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    color: #77BE1D;
+}
+
+
+
+.disclaimer1 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: 10px;
+}
+
+.disclaimer1 a {
+    color: blue;
+    text-decoration: none;
+}
+
+.disclaimer1 a:hover {
+    text-decoration: underline;
+}
+

@@ -19,8 +19,8 @@
 
     <div class="select_place">
         <select name="" id="" class="select">
-            <option value="0">Сначала дешевые</option>
-            <option value="1">Сначала дорогие</option>
+            <option value="0">Низкая цена</option>
+            <option value="1">Высокая цена</option>
             <option value="2">По алфавиту</option>
         </select>
     </div>
@@ -216,7 +216,7 @@
 
 
                 <div class="button-buy-div">
-                    <a href="{{ route('products.add-to-cart',['id' => $id]) }}">
+                    <a href="{{ route('products.add-to-cart',$product) }}">
                         <button class="buy-button">
                             <span class="button-text">buy</span>
                         </button>

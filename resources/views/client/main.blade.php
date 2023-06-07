@@ -24,38 +24,6 @@
                 </button>
             @endforeach
 
-
-{{--            <button class="catal_button">--}}
-{{--                <p class="v1602_2095">•  </p>--}}
-{{--            </button>--}}
-{{--            <button class="catal_button">--}}
-{{--                <p class="v1602_2095">•  </p>--}}
-{{--            </button>--}}
-{{--            <button class="catal_button">--}}
-{{--                <p class="v1602_2095">• Наушники </p>--}}
-{{--            </button>--}}
-{{--            <button class="catal_button">--}}
-{{--                <p class="v1602_2095">• Микрофоны </p>--}}
-{{--            </button>--}}
-{{--            <button class="catal_button">--}}
-{{--                <p class="v1602_2095">• Геймпады </p>--}}
-{{--            </button>--}}
-{{--            <button class="catal_button">--}}
-{{--                <p class="v1602_2095">• Мониторы </p>--}}
-{{--            </button>--}}
-{{--            <button class="catal_button">--}}
-{{--                <p class="v1602_2095">• Комплектующие </p>--}}
-{{--            </button>--}}
-{{--            <button class="catal_button">--}}
-{{--                <p class="v1602_2095">• VR оборудование </p>--}}
-{{--            </button>--}}
-{{--            <button class="catal_button">--}}
-{{--                <p class="v1602_2095">• Для дома </p>--}}
-{{--            </button>--}}
-{{--            <button class="catal_button">--}}
-{{--                <p class="v1602_2095">•  </p>--}}
-{{--            </button>--}}
-
         </div>
 
         <div class="name"></div>

@@ -6,15 +6,13 @@
 body {
     background-color: #06030F;
 }
-.Tovar_Cart{
-    display: flex;
-    margin-left: 30px;
-    margin-top: 40px;
-}
-.sliderC {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.slider {
+    width: 342px;
+    height: 457px;
+    overflow: hidden;
+    border: 10px solid #fff;
+    margin-left: 100px;
 }
 
 .main-cardC {
@@ -52,6 +50,7 @@ body {
     letter-spacing: 0em;
     text-align: center;
     color: #E4DCDCCF;
+    margin-right: 175px;
 }
 
 .subheading {
@@ -61,6 +60,7 @@ body {
     line-height: 42px;
     letter-spacing: 0em;
     text-align: left;
+    margin-left: 30px;
 }
 
 .price {
@@ -87,6 +87,8 @@ body {
 
 .text_Tovar_Cart{
     margin-left: 30px;
+    display: flex;
+    flex-direction: column;
 }
 .sliders{
     width: 400%;
@@ -171,32 +173,23 @@ input[name= "r"]{
     margin-left: 35px;
 }
 .buy-button {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    width: 144px;
-    height: 63px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 18px 40px 22px;
-    gap: 10px;
-    border: none;
-    cursor: pointer;
+    background-color: rgba(3, 0, 28, 1); /* Задний фон кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Удаление границы */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Удаление подчеркивания у ссылки */
+    display: inline-block; /* Отображение кнопки как блока */
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 4px; /* Закругление углов кнопки */
+    transition-duration: 0.4s; /* Длительность анимации при наведении */
+    cursor: pointer; /* Изменение курсора при наведении */
 }
 
-.button-text {
-    width: 64px;
-    height: 23px;
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 130%;
-    color: #FFFFFF;
+.buy-button:hover {
+    background-color:  rgba(119, 190, 29, 1); /* Цвет заднего фона при наведении */
 }
-.buy-button{
-    width: 300px;
-}
+
+
 
 

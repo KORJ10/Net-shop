@@ -14,14 +14,15 @@ use App\Http\Controllers\CategoryController;
 |
 */
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('main');
-
+Route::post('/cart-orders', 'CartOrderController@store')->name('cart-orders.store');
+Route::resource('cart-orders', 'CartOrderController');
 Auth::routes();
 
 Route::resource('products',ProductController::class);
 Route::get('/catalog',[ProductController::class,'catalog'])->name('catalog');
 Route::get('/cart', [ProductController::class,'cart'])->name('product.cart');
 Route::get('/add-to-cart/{id}', [ProductController::class,'addToCart'])->name('products.add-to-cart');
-Route::post('/update-cart', [ProductController::class,'updateCart'])->name('products.update-cart');
+Route::post('/update-cart', [ProductController::class,'addProduct'])->name('products.update-cart');
 Route::delete('/remove-from-cart', [ProductController::class,'remove'])->name('products.remove-product');
 Route::get('/define_product',[ProductController::class,'showDefineProduct'])->name('product.show-define-product');
 

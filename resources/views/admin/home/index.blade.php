@@ -86,6 +86,13 @@
                     </div>
                 </div>
 
+                <div>
+                   <a href="{{route('categories.index')}}"><button>создать ктегории</button></a>
+                </div>
+                <div>
+                    <a href="{{route('products.index')}}"><button>посмотреть склад продуктов</button></a>
+                </div>
+
             </div>
 
         </div>

@@ -97,17 +97,16 @@ class ProductController extends Controller
         return redirect()->route('products.index');
     }
 
-    public function updateCart(Request $request)
+    public function addProduct(Request $request)
     {
-
-        if($request->id and $request->quantity)
+        if($request->id)
         {
             $cart = session()->get('cart');
-            $cart[$request->id]["quantity"] = $request->quantity;
+            $cart[$request->id]["quantity"] = $cart[$request->id]["quantity"] + 1;
             session()->put('cart', $cart);
-            session()->flash('success', 'Cart updated successfully');
+            php
         }
-        return redirect()->route('product.cart');
+        return response()->json(['id' => $request->id,'quantity' => $cart[$request->id]["quantity"]]);
     }
     /**
      * Remove the specified resource from storage.
@@ -123,7 +122,8 @@ class ProductController extends Controller
     }
     public function cart()
     {
-        return view('cart');
+        return view('client.cart-orders.cart');
+
     }
     public function addToCart($id)
     {
@@ -145,7 +145,6 @@ class ProductController extends Controller
             session()->put('cart', $cart);
             return redirect()->back()->with('success', 'Product added to cart successfully!');
         }
-        // if cart not empty then check if this product exist then increment quantity
         if(isset($cart[$id])) {
             $cart[$id]['quantity']++;
             session()->put('cart', $cart);
@@ -163,13 +162,12 @@ class ProductController extends Controller
     }
     public function remove(Request $request)
     {
-        if($request->id) {
+        if ($request->id) {
+            if(confirm('вы уверены?'))
             $cart = session()->get('cart');
-            if(isset($cart[$request->id])) {
-                unset($cart[$request->id]);
-                session()->put('cart', $cart);
-            }
-            session()->flash('success', 'Product removed successfully');
+            unset($cart[$request->id]);
+            session()->put('cart', $cart);
+            session()->flash('success', 'Cart updated successfully');
         }
     }
 }

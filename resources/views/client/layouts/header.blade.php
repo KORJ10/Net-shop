@@ -5,7 +5,6 @@
     <div class="empty"></div>
     <div class="navBar">
         <ul>
-            <li><a href="#" class="header_links">Отзывы</a></li>
             <li><a href="{{ route('garanty') }}" class="header_links">Гарантии</a></li>
             <li><a href="{{ route('catalog') }}" class="header_links">Каталог</a></li>
         </ul>
@@ -23,7 +22,6 @@
                     </button>
 
                     <ul  class="dropdown-menu" aria-labelledby="userDropdownMenu">
-
                         <li><a class="dropdown-item" href="{{ route('logout') }}">Выход</a></li>
                     </ul>
                 </div>
