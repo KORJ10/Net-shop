@@ -14,7 +14,8 @@ use App\Http\Controllers\CategoryController;
 |
 */
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('main');
-
+Route::post('/cart-orders', 'CartOrderController@store')->name('cart-orders.store');
+Route::resource('cart-orders', 'CartOrderController');
 Auth::routes();
 
 Route::resource('products',ProductController::class);
@@ -30,7 +31,6 @@ Route::delete('remove-from-cart', [ProductController::class,'remove'])->name('pr
 //Route::resource('payments',PaymentController::class);
 //Route::resource('categories',CategoryController::class);
 
-
 Route::get('/cart_tovar', function () {
     return view('client.tovary.cart_tovar');
 })->name('cart_tovar');
@@ -38,6 +38,10 @@ Route::get('/cart_tovar', function () {
 Route::get('/garantii', function () {
     return view('client.garantii.garantii');
 })->name('garantii');
+
+Route::get('/shop-conditions', function () {
+    return view('client.shop-conditions.shop-conditions');
+})->name('shop-conditions');
 
 Route::middleware(['role:admin'])->prefix('admin_panel')->group(function(){
     Route::get('/',[\App\Http\Controllers\Admin\HomeController::class,'index']);

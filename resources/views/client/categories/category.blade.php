@@ -19,8 +19,8 @@
 
     <div class="select_place">
         <select name="" id="" class="select">
-            <option value="0">Сначала дешевые</option>
-            <option value="1">Сначала дорогие</option>
+            <option value="0">Низкая цена</option>
+            <option value="1">Высокая цена</option>
             <option value="2">По алфавиту</option>
         </select>
     </div>

@@ -115,7 +115,8 @@ class ProductController extends Controller
     }
     public function cart()
     {
-        return view('cart');
+        return view('client.cart-orders.cart');
+
     }
     public function addToCart($id)
     {
