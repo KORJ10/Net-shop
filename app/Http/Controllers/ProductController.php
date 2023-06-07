@@ -104,7 +104,7 @@ class ProductController extends Controller
             $cart = session()->get('cart');
             $cart[$request->id]["quantity"] = $cart[$request->id]["quantity"] + 1;
             session()->put('cart', $cart);
-            php
+
         }
         return response()->json(['id' => $request->id,'quantity' => $cart[$request->id]["quantity"]]);
     }
